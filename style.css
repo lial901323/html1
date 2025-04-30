@@ -342,6 +342,13 @@ footer {
   font-size: 24px;
   line-height: 14px;
 }
+.rocket-icon {
+  display: inline-block;
+  padding: 10px; /* Adds space around the icon */
+  border-radius: 50%; /* Makes the background circular */
+  background-color: #FF6347; /* Change this to any color you want for the circle */
+  transition: background-color 0.3s ease; /* Optional: smooth color transition on hover */
+}
 
 /* ------------------------ Video Section ------------------------ */
 
@@ -352,4 +359,4 @@ footer {
   height: 575px;
   width: 1136px;
   margin: 32px;
-} 
+}

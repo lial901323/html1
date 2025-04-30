@@ -64,13 +64,15 @@ li {
 }
 
 .main-nav li a:hover {
-  color: #400a7a;
+  color: #612999;
   font-weight: 700;
-  text-decoration: underline;
+  line-height: 100%;
 }
 
+/* ------------------------WELCOME------------------------ */
+
 .front-img {
-  background-image: url(../images/fpage.png);
+  background-image: url(../images/photoopenercat.webp);
   height: 797px;
   width: 100%;
   background-repeat: no-repeat;
@@ -91,7 +93,6 @@ li {
   font-size: 96px;
   font-weight: 800;
   line-height: 100%;
-  letter-spacing: 0;
 }
 
 #welcome p {
@@ -99,8 +100,9 @@ li {
   font-size: 24px;
   font-weight: 600;
   line-height: 100%;
-  letter-spacing: 0;
 }
+
+/* ------------------------ABOUT------------------------ */
 
 .about {
   font-family: 'Rubik', sans-serif;
@@ -110,7 +112,7 @@ li {
 }
 
 .about h1 {
-  color: rgb(102, 38, 145);
+  color: #333333; /* changed from purple to normal */
   font-weight: 500;
   font-size: 40px;
   line-height: 40px;
@@ -121,14 +123,20 @@ li {
   font-size: 20px;
 }
 
+/* --------------------Popular pieces-------------------- */
+
+.product-title {
+  color: #612999; /* purple */
+  font-family: 'Rubik', sans-serif;
+  margin-left: 32px;
+}
+
 .container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(276px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 32px;
-  width: 784px;
-  height: 1096px;
-  margin-left: 32px;
-  margin-right: 384px;
+  max-width: 880px;
+  margin-left: 32px; /* aligned left */
   font-family: 'Rubik', sans-serif;
   color: #612999;
   font-weight: 500;
@@ -137,7 +145,9 @@ li {
 }
 
 .container > section img {
-  display: block;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
   border-radius: 38px;
   width: 376px;
   height: 276px;
@@ -147,58 +157,68 @@ li {
 
 .container > .card {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  position: relative;
   background-color: #EFECFF;
+  text-align: left;
   width: 376px;
   height: 496px;
   border-radius: 38px;
-  padding: 32px;
-  position: relative;
 }
 
 .container > .card h2 {
+  position: absolute;
   font-family: 'Abel', sans-serif;
   color: black;
+  width: 221px;
+  height: 38px;
+  margin-top: 297px;
+  margin-left: 32px;
   font-size: 30px;
   font-weight: 400;
-  margin: 0 0 8px 0;
-}
-
-.container > .card p {
-  font-family: 'Abel', sans-serif;
-  color: #333333;
-  font-size: 18px;
-  line-height: 100%;
-  margin: 0 0 8px 0;
 }
 
 .container > .card h3 {
+  position: absolute;
   font-family: 'Abel', sans-serif;
   color: #612999;
+  width: 221px;
+  height: 38px;
+  margin-top: 415px;
+  margin-left: 32px;
   font-size: 30px;
   font-weight: 400;
-  margin: 0;
 }
 
-.container > .card .heart,
-.container > .card .cart {
+.container > .card p {
   position: absolute;
+  font-family: 'Abel', sans-serif;
+  color: #333333;
+  margin-top: 342px;
+  margin-left: 32px;
+  max-width: 315px;
+  max-height: 96px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
 }
 
 .container > .card .heart {
+  position: absolute;
   width: 47px;
   height: 47px;
-  top: 35px;
-  right: 32px;
+  margin-top: 35px;
+  margin-left: 287px;
 }
 
 .container > .card .cart {
+  position: absolute;
   width: 67px;
   height: 67px;
-  bottom: 32px;
-  right: 32px;
+  margin-top: 406px;
+  margin-left: 262px;
 }
+
+/* ------------------------FOOTER------------------------ */
 
 footer {
   display: grid;
@@ -210,46 +230,66 @@ footer {
 }
 
 .footer-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  display: flex;
+  position: relative;
+  height: 126px;
   gap: 150px;
   margin: 32px;
 }
 
-.footer-card {
+.footer-grid > .footer-card {
   display: flex;
-  flex-direction: column;
+  position: relative;
+  /* Removed red background */
 }
 
-.footer-card h1 {
+.footer-grid > .footer-card h1 {
+  /* Removed blueviolet background */
+  color: #333333;
   font-size: 18px;
+  margin: 0px;
+  padding: 0px;
   margin-bottom: 16px;
+  height: 28px;
 }
 
-.footer-card ul {
-  padding: 0;
+.footer-grid > .footer-card ul {
+  padding: 0px;
   display: flex;
   flex-direction: column;
   gap: 8px;
+  position: absolute;
+  margin-top: 16px;
+  top: 16px;
+  /* Removed green background */
 }
 
-.footer-card ul li a {
+.footer-grid > .footer-card ul li a {
+  /* Removed blue background */
   color: #333333;
+  margin-top: 16px;
 }
 
 .icons {
-  margin: 182px 0 0 32px;
+  position: absolute;
+  margin-top: 182px;
+  margin-left: 32px;
 }
 
 .icons img {
+  width: 32px;
+  height: 32px;
   margin-right: 24px;
 }
+
+/* ------------------------ Container3 ------------------------ */
 
 .container3 {
   width: 1052px;
   height: 300px;
+  border-width: 4px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 300px 388.29px 300px;
   margin: 32px;
   gap: 32px;
 }
@@ -260,11 +300,13 @@ footer {
   border: 4px solid #E6DBFE;
 }
 
+/* ------------------------ List Page 2 ------------------------ */
+
 .list-page2 {
   font-family: 'Rubik', sans-serif;
   height: 346px;
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
 }
 
 .list-page2 h1 {
@@ -275,7 +317,8 @@ footer {
 }
 
 .list-page2 ul {
-  padding: 0;
+  padding: 0px;
+  margin: 0px;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -291,12 +334,16 @@ footer {
 }
 
 .list-page2 ul li a {
+  position: absolute;
+  margin-top: 31px;
+  margin-left: 16px;
   color: black;
   font-weight: 400;
   font-size: 24px;
   line-height: 14px;
-  margin-left: 16px;
 }
+
+/* ------------------------ Video Section ------------------------ */
 
 .video {
   font-family: 'Rubik', sans-serif;
@@ -305,9 +352,4 @@ footer {
   height: 575px;
   width: 1136px;
   margin: 32px;
-}
-
-a:focus {
-  outline: 2px solid #612999;
-  outline-offset: 2px;
-}
+} 
